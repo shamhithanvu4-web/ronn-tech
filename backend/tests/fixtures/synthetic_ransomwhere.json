@@ -1,0 +1,7 @@
+{
+  "result": [
+    {"address": "bc1quhj7te09uhj7te09uhj7te09uhj7te0996mjem", "blockchain": "bitcoin", "family": "SyntheticLocker", "createdAt": "2020-01-01T00:00:00Z"},
+    {"address": "bc1qbadaddress", "blockchain": "bitcoin", "family": "SyntheticLocker"},
+    {"address": "Xsomething", "blockchain": "dogecoin", "family": "Other"}
+  ]
+}

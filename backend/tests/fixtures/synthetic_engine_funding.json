@@ -1,0 +1,47 @@
+{
+ "chain": "ethereum",
+ "suspect": "0x6464646464646464646464646464646464646464",
+ "labels": [
+  {
+   "chain": "ethereum",
+   "address": "0x4141414141414141414141414141414141414141",
+   "entity_id": 6,
+   "entity_name": "Deltax (synthetic)",
+   "entity_type": "CEX",
+   "is_vasp": true,
+   "role": "HOT",
+   "source": "synthetic",
+   "reliability": 0.95,
+   "tier": "A"
+  }
+ ],
+ "transfers": [
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-w-1",
+   "block_time": 1700000000,
+   "from": "0x4141414141414141414141414141414141414141",
+   "to": "0x6464646464646464646464646464646464646464",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "5000",
+   "usd": "5000",
+   "block_number": 18000000,
+   "in_scope": true
+  },
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-w-2",
+   "block_time": 1700172800,
+   "from": "0x6464646464646464646464646464646464646464",
+   "to": "0x7373737373737373737373737373737373737373",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "5000",
+   "usd": "5000",
+   "block_number": 18014400,
+   "in_scope": true
+  }
+ ],
+ "_comment": "SYNTHETIC TEST DATA - fabricated addresses and transactions; see synthetic_make_engine_fixtures.py"
+}

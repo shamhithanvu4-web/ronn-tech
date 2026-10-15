@@ -1,0 +1,84 @@
+{
+ "chain": "bitcoin",
+ "suspect": "bc1q5xs6rgdp5xs6rgdp5xs6rgdp5xs6rgdp4gkthz",
+ "btc_price": "50000",
+ "labels": [
+  {
+   "chain": "bitcoin",
+   "address": "bc1qc0pu8s7rc0pu8s7rc0pu8s7rc0pu8s7rfdgfg5",
+   "entity_id": 3,
+   "entity_name": "Gammax (synthetic)",
+   "entity_type": "CEX",
+   "is_vasp": true,
+   "role": "HOT",
+   "source": "synthetic",
+   "reliability": 0.95,
+   "tier": "A"
+  }
+ ],
+ "raw_txs": [
+  {
+   "chain": "bitcoin",
+   "tx_id": "syn-b-in",
+   "block_time": 1700000000,
+   "block_height": 800000,
+   "inputs": [
+    {
+     "address": "bc1q7mm0dahk7mm0dahk7mm0dahk7mm0dahk8sttd7",
+     "value": "1.001"
+    }
+   ],
+   "outputs": [
+    {
+     "address": "bc1q5xs6rgdp5xs6rgdp5xs6rgdp5xs6rgdp4gkthz",
+     "value": "1.0"
+    }
+   ]
+  },
+  {
+   "chain": "bitcoin",
+   "tx_id": "syn-b-1",
+   "block_time": 1700000600,
+   "block_height": 800001,
+   "inputs": [
+    {
+     "address": "bc1q5xs6rgdp5xs6rgdp5xs6rgdp5xs6rgdp4gkthz",
+     "value": "1.0"
+    }
+   ],
+   "outputs": [
+    {
+     "address": "bc1qk2et9v4jk2et9v4jk2et9v4jk2et9v4jhzxjr8",
+     "value": "0.6"
+    },
+    {
+     "address": "bc1qzut3w9chzut3w9chzut3w9chzut3w9chk80dml",
+     "value": "0.399"
+    }
+   ]
+  },
+  {
+   "chain": "bitcoin",
+   "tx_id": "syn-b-2",
+   "block_time": 1700001800,
+   "block_height": 800003,
+   "inputs": [
+    {
+     "address": "bc1qk2et9v4jk2et9v4jk2et9v4jk2et9v4jhzxjr8",
+     "value": "0.6"
+    },
+    {
+     "address": "bc1qc0pu8s7rc0pu8s7rc0pu8s7rc0pu8s7rfdgfg5",
+     "value": "0.4"
+    }
+   ],
+   "outputs": [
+    {
+     "address": "bc1q6n2df4x56n2df4x56n2df4x56n2df4x56nessm",
+     "value": "0.999"
+    }
+   ]
+  }
+ ],
+ "_comment": "SYNTHETIC TEST DATA - fabricated addresses and transactions; see synthetic_make_engine_fixtures.py"
+}

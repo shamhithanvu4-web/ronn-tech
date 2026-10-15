@@ -1,0 +1,47 @@
+{
+ "chain": "ethereum",
+ "suspect": "0x6868686868686868686868686868686868686868",
+ "labels": [
+  {
+   "chain": "polygon",
+   "address": "0x4646464646464646464646464646464646464646",
+   "entity_id": 10,
+   "entity_name": "Thetax (synthetic)",
+   "entity_type": "CEX",
+   "is_vasp": true,
+   "role": "HOT",
+   "source": "synthetic",
+   "reliability": 0.95,
+   "tier": "A"
+  }
+ ],
+ "transfers": [
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-x-1",
+   "block_time": 1700000000,
+   "from": "0x7878787878787878787878787878787878787878",
+   "to": "0x6868686868686868686868686868686868686868",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "3000",
+   "usd": "3000",
+   "block_number": 18000000,
+   "in_scope": true
+  },
+  {
+   "chain": "polygon",
+   "tx_hash": "syn-x-2",
+   "block_time": 1700001200,
+   "from": "0x6868686868686868686868686868686868686868",
+   "to": "0x4646464646464646464646464646464646464646",
+   "asset": "USDC",
+   "token_contract": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+   "amount": "3000",
+   "usd": "3000",
+   "block_number": 18000100,
+   "in_scope": true
+  }
+ ],
+ "_comment": "SYNTHETIC TEST DATA - fabricated addresses and transactions; see synthetic_make_engine_fixtures.py"
+}

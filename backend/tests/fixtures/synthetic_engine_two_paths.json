@@ -1,0 +1,98 @@
+{
+ "chain": "ethereum",
+ "suspect": "0x6767676767676767676767676767676767676767",
+ "labels": [
+  {
+   "chain": "ethereum",
+   "address": "0x4444444444444444444444444444444444444444",
+   "entity_id": 8,
+   "entity_name": "Epsilonx (synthetic)",
+   "entity_type": "CEX",
+   "is_vasp": true,
+   "role": "HOT",
+   "source": "synthetic",
+   "reliability": 0.95,
+   "tier": "A"
+  },
+  {
+   "chain": "ethereum",
+   "address": "0x4545454545454545454545454545454545454545",
+   "entity_id": 8,
+   "entity_name": "Epsilonx (synthetic)",
+   "entity_type": "CEX",
+   "is_vasp": true,
+   "role": "HOT",
+   "source": "synthetic",
+   "reliability": 0.95,
+   "tier": "A"
+  }
+ ],
+ "transfers": [
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-c-0",
+   "block_time": 1700000000,
+   "from": "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+   "to": "0x6767676767676767676767676767676767676767",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "2000",
+   "usd": "2000",
+   "block_number": 18000000,
+   "in_scope": true
+  },
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-c-1",
+   "block_time": 1700000100,
+   "from": "0x6767676767676767676767676767676767676767",
+   "to": "0x7575757575757575757575757575757575757575",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "1000",
+   "usd": "1000",
+   "block_number": 18000008,
+   "in_scope": true
+  },
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-c-2",
+   "block_time": 1700000200,
+   "from": "0x6767676767676767676767676767676767676767",
+   "to": "0x7676767676767676767676767676767676767676",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "1000",
+   "usd": "1000",
+   "block_number": 18000016,
+   "in_scope": true
+  },
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-c-3",
+   "block_time": 1700432000,
+   "from": "0x7575757575757575757575757575757575757575",
+   "to": "0x4444444444444444444444444444444444444444",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "1000",
+   "usd": "1000",
+   "block_number": 18036000,
+   "in_scope": true
+  },
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-c-4",
+   "block_time": 1703456000,
+   "from": "0x7676767676767676767676767676767676767676",
+   "to": "0x4545454545454545454545454545454545454545",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "1000",
+   "usd": "1000",
+   "block_number": 18288000,
+   "in_scope": true
+  }
+ ],
+ "_comment": "SYNTHETIC TEST DATA - fabricated addresses and transactions; see synthetic_make_engine_fixtures.py"
+}

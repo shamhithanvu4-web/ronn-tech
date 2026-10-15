@@ -1,0 +1,135 @@
+{
+ "chain": "bitcoin",
+ "suspect": "bc1qyysjzgfpyysjzgfpyysjzgfpyysjzgfpf7224r",
+ "btc_price": "50000",
+ "labels": [],
+ "raw_txs": [
+  {
+   "chain": "bitcoin",
+   "tx_id": "syn-p-in",
+   "block_time": 1700000000,
+   "block_height": 800000,
+   "inputs": [
+    {
+     "address": "bc1q7mm0dahk7mm0dahk7mm0dahk7mm0dahk8sttd7",
+     "value": "10.0001"
+    }
+   ],
+   "outputs": [
+    {
+     "address": "bc1qyysjzgfpyysjzgfpyysjzgfpyysjzgfpf7224r",
+     "value": "10.0"
+    }
+   ]
+  },
+  {
+   "chain": "bitcoin",
+   "tx_id": "syn-p-1",
+   "block_time": 1700000600,
+   "block_height": 800001,
+   "inputs": [
+    {
+     "address": "bc1qyysjzgfpyysjzgfpyysjzgfpyysjzgfpf7224r",
+     "value": "10.0"
+    }
+   ],
+   "outputs": [
+    {
+     "address": "bc1qxycnzvf3xycnzvf3xycnzvf3xycnzvf36suk2s",
+     "value": "0.5"
+    },
+    {
+     "address": "bc1qyg3zyg3zyg3zyg3zyg3zyg3zyg3zyg3zc6v074",
+     "value": "9.49"
+    }
+   ]
+  },
+  {
+   "chain": "bitcoin",
+   "tx_id": "syn-p-2",
+   "block_time": 1700001200,
+   "block_height": 800002,
+   "inputs": [
+    {
+     "address": "bc1qyg3zyg3zyg3zyg3zyg3zyg3zyg3zyg3zc6v074",
+     "value": "9.49"
+    }
+   ],
+   "outputs": [
+    {
+     "address": "bc1qxgeryv3jxgeryv3jxgeryv3jxgeryv3jt56npx",
+     "value": "0.4"
+    },
+    {
+     "address": "bc1qyv3jxgeryv3jxgeryv3jxgeryv3jxgere2dw55",
+     "value": "9.08"
+    }
+   ]
+  },
+  {
+   "chain": "bitcoin",
+   "tx_id": "syn-p-3",
+   "block_time": 1700001800,
+   "block_height": 800003,
+   "inputs": [
+    {
+     "address": "bc1qyv3jxgeryv3jxgeryv3jxgeryv3jxgere2dw55",
+     "value": "9.08"
+    }
+   ],
+   "outputs": [
+    {
+     "address": "bc1qxvenxvenxvenxvenxvenxvenxvenxven2ymjt8",
+     "value": "0.3"
+    },
+    {
+     "address": "bc1qysjzgfpyysjzgfpyysjzgfpyysjzgfpye62tng",
+     "value": "8.77"
+    }
+   ]
+  },
+  {
+   "chain": "bitcoin",
+   "tx_id": "syn-p-cj",
+   "block_time": 1700002400,
+   "block_height": 800004,
+   "inputs": [
+    {
+     "address": "bc1qysjzgfpyysjzgfpyysjzgfpyysjzgfpye62tng",
+     "value": "8.77"
+    },
+    {
+     "address": "bc1q2pg9q5zs2pg9q5zs2pg9q5zs2pg9q5zsh3y37s",
+     "value": "1.0"
+    }
+   ],
+   "outputs": [
+    {
+     "address": "bc1qgpqyqszqgpqyqszqgpqyqszqgpqyqszqyljdpr",
+     "value": "1.5"
+    },
+    {
+     "address": "bc1qg9q5zs2pg9q5zs2pg9q5zs2pg9q5zs2p90nvtz",
+     "value": "1.5"
+    },
+    {
+     "address": "bc1qgfpyysjzgfpyysjzgfpyysjzgfpyysjz5t4fq5",
+     "value": "1.5"
+    },
+    {
+     "address": "bc1qgdp5xs6rgdp5xs6rgdp5xs6rgdp5xs6r4m5g24",
+     "value": "1.5"
+    },
+    {
+     "address": "bc1qg3zyg3zyg3zyg3zyg3zyg3zyg3zyg3zy4tnddf",
+     "value": "1.5"
+    },
+    {
+     "address": "bc1q29g4z52329g4z52329g4z52329g4z523kp9s53",
+     "value": "2.26"
+    }
+   ]
+  }
+ ],
+ "_comment": "SYNTHETIC TEST DATA - fabricated addresses and transactions; see synthetic_make_engine_fixtures.py"
+}

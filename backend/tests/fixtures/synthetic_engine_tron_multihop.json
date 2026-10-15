@@ -1,0 +1,73 @@
+{
+ "chain": "tron",
+ "suspect": "TQhqRHgEonKEYqudomS8243o3bejg8dt1d",
+ "labels": [
+  {
+   "chain": "tron",
+   "address": "TVNZDWY6YpQcK8Y41ehav5W9mhW8HQGynR",
+   "entity_id": 2,
+   "entity_name": "Betax (synthetic)",
+   "entity_type": "CEX",
+   "is_vasp": true,
+   "role": "HOT",
+   "source": "synthetic",
+   "reliability": 0.8,
+   "tier": "B"
+  }
+ ],
+ "transfers": [
+  {
+   "chain": "tron",
+   "tx_hash": "syn-t-1",
+   "block_time": 1700000000,
+   "from": "TWvo9apiTq74uE5XQwnjt5zGgQ7vUayejH",
+   "to": "TQhqRHgEonKEYqudomS8243o3bejg8dt1d",
+   "asset": "USDT",
+   "token_contract": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+   "amount": "2000",
+   "usd": "2000",
+   "block_number": null,
+   "in_scope": true
+  },
+  {
+   "chain": "tron",
+   "tx_hash": "syn-t-2",
+   "block_time": 1700000600,
+   "from": "TQhqRHgEonKEYqudomS8243o3bejg8dt1d",
+   "to": "TSG5MMxrio1h8wT7D4XGz4XuxJGXwPhZBj",
+   "asset": "USDT",
+   "token_contract": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+   "amount": "2000",
+   "usd": "2000",
+   "block_number": null,
+   "in_scope": true
+  },
+  {
+   "chain": "tron",
+   "tx_hash": "syn-t-3",
+   "block_time": 1700003600,
+   "from": "TSG5MMxrio1h8wT7D4XGz4XuxJGXwPhZBj",
+   "to": "TTpKHSFUdoi9j2zacMcRx522rztL61ojFS",
+   "asset": "USDT",
+   "token_contract": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+   "amount": "1990",
+   "usd": "1990",
+   "block_number": null,
+   "in_scope": true
+  },
+  {
+   "chain": "tron",
+   "tx_hash": "syn-t-4",
+   "block_time": 1700007200,
+   "from": "TTpKHSFUdoi9j2zacMcRx522rztL61ojFS",
+   "to": "TVNZDWY6YpQcK8Y41ehav5W9mhW8HQGynR",
+   "asset": "USDT",
+   "token_contract": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+   "amount": "1975",
+   "usd": "1975",
+   "block_number": null,
+   "in_scope": true
+  }
+ ],
+ "_comment": "SYNTHETIC TEST DATA - fabricated addresses and transactions; see synthetic_make_engine_fixtures.py"
+}

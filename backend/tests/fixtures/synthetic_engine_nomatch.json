@@ -1,0 +1,47 @@
+{
+ "chain": "ethereum",
+ "suspect": "0x6262626262626262626262626262626262626262",
+ "labels": [],
+ "transfers": [
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-n-0",
+   "block_time": 1700000000,
+   "from": "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+   "to": "0x6262626262626262626262626262626262626262",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "5000",
+   "usd": "5000",
+   "block_number": 18000000,
+   "in_scope": true
+  },
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-n-1",
+   "block_time": 1700007200,
+   "from": "0x6262626262626262626262626262626262626262",
+   "to": "0x7373737373737373737373737373737373737373",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "5000",
+   "usd": "5000",
+   "block_number": 18000600,
+   "in_scope": true
+  },
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-n-2",
+   "block_time": 1700020000,
+   "from": "0x7373737373737373737373737373737373737373",
+   "to": "0x7474747474747474747474747474747474747474",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "5000",
+   "usd": "5000",
+   "block_number": 18001666,
+   "in_scope": true
+  }
+ ],
+ "_comment": "SYNTHETIC TEST DATA - fabricated addresses and transactions; see synthetic_make_engine_fixtures.py"
+}

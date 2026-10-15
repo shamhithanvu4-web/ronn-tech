@@ -1,0 +1,61 @@
+{
+ "chain": "ethereum",
+ "suspect": "0x5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e",
+ "btc_price": null,
+ "labels": [
+  {
+   "chain": "ethereum",
+   "address": "0x4040404040404040404040404040404040404040",
+   "entity_id": 1,
+   "entity_name": "Acmex (synthetic)",
+   "entity_type": "CEX",
+   "is_vasp": true,
+   "role": "HOT",
+   "source": "synthetic",
+   "reliability": 0.95,
+   "tier": "A"
+  }
+ ],
+ "transfers": [
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-dep-1",
+   "block_time": 1700000000,
+   "from": "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+   "to": "0x5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "1000",
+   "usd": "1000",
+   "block_number": 18000000,
+   "in_scope": true
+  },
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-gas-1",
+   "block_time": 1700001800,
+   "from": "0x4040404040404040404040404040404040404040",
+   "to": "0x5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e",
+   "asset": "ETH",
+   "token_contract": null,
+   "amount": "0.004",
+   "usd": "8.00",
+   "block_number": 18000150,
+   "in_scope": true
+  },
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-sweep-1",
+   "block_time": 1700003600,
+   "from": "0x5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e",
+   "to": "0x4040404040404040404040404040404040404040",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "1000",
+   "usd": "1000",
+   "block_number": 18000300,
+   "in_scope": true
+  }
+ ],
+ "_comment": "SYNTHETIC TEST DATA - fabricated addresses and transactions; see synthetic_make_engine_fixtures.py"
+}

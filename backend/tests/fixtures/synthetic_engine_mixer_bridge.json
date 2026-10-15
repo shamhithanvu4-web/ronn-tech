@@ -1,0 +1,72 @@
+{
+ "chain": "ethereum",
+ "suspect": "0x6161616161616161616161616161616161616161",
+ "labels": [
+  {
+   "chain": "ethereum",
+   "address": "0x7171717171717171717171717171717171717171",
+   "entity_id": 4,
+   "entity_name": "Mixer (synthetic)",
+   "entity_type": "MIXER",
+   "is_vasp": false,
+   "role": "CONTRACT",
+   "source": "synthetic",
+   "reliability": 0.8,
+   "tier": "B"
+  },
+  {
+   "chain": "ethereum",
+   "address": "0x7272727272727272727272727272727272727272",
+   "entity_id": 5,
+   "entity_name": "Bridge (synthetic)",
+   "entity_type": "BRIDGE",
+   "is_vasp": false,
+   "role": "CONTRACT",
+   "source": "synthetic",
+   "reliability": 0.8,
+   "tier": "B"
+  }
+ ],
+ "transfers": [
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-m-0",
+   "block_time": 1700000000,
+   "from": "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+   "to": "0x6161616161616161616161616161616161616161",
+   "asset": "ETH",
+   "token_contract": null,
+   "amount": "10",
+   "usd": "20000.0",
+   "block_number": 18000000,
+   "in_scope": true
+  },
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-m-1",
+   "block_time": 1700000100,
+   "from": "0x6161616161616161616161616161616161616161",
+   "to": "0x7171717171717171717171717171717171717171",
+   "asset": "ETH",
+   "token_contract": null,
+   "amount": "5",
+   "usd": "10000.0",
+   "block_number": 18000008,
+   "in_scope": true
+  },
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-m-2",
+   "block_time": 1700000200,
+   "from": "0x6161616161616161616161616161616161616161",
+   "to": "0x7272727272727272727272727272727272727272",
+   "asset": "ETH",
+   "token_contract": null,
+   "amount": "5",
+   "usd": "10000.0",
+   "block_number": 18000016,
+   "in_scope": true
+  }
+ ],
+ "_comment": "SYNTHETIC TEST DATA - fabricated addresses and transactions; see synthetic_make_engine_fixtures.py"
+}

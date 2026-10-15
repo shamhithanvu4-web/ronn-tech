@@ -1,0 +1,49 @@
+# docker compose up --build
+#   frontend  http://localhost:3000
+#   backend   http://localhost:8000  (API under /api, OpenAPI docs at /docs)
+# Copy backend/.env.example to backend/.env and set at least JWT_SECRET,
+# SAHYOG_SHARED_SECRET and the three SEED_*_PASSWORD values first.
+# For an offline demo set DATA_MODE=replay in backend/.env (uses committed fixtures).
+services:
+  backend:
+    build: ./backend
+    env_file: ./backend/.env
+    environment:
+      FRONTEND_ORIGIN: ${FRONTEND_ORIGIN:-http://localhost:3000}
+      # The database lives on a volume (not in /app/data, which holds the committed label seed).
+      # Set COMPOSE_DATABASE_URL to use PostgreSQL instead.
+      DATABASE_URL: ${COMPOSE_DATABASE_URL:-sqlite:////app/db/ronntech.db}
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    volumes:
+      - backend-db:/app/db
+      - backend-evidence:/app/evidence
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "from urllib.request import urlopen; urlopen('http://127.0.0.1:8000/', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    ports:
+      - "${FRONTEND_PORT:-3000}:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  backend-db:
+  backend-evidence:

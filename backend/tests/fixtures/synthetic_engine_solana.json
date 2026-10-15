@@ -1,0 +1,47 @@
+{
+ "chain": "solana",
+ "suspect": "6URwbPipuA4MJLG7LCRRZuWnms3JZ9cRG3z9indXWz8G",
+ "labels": [
+  {
+   "chain": "solana",
+   "address": "6cGXszer5keoaWm8Co5G9f4KGBThuGz4NsKTqYij1emg",
+   "entity_id": 9,
+   "entity_name": "Zetax (synthetic)",
+   "entity_type": "CEX",
+   "is_vasp": true,
+   "role": "HOT",
+   "source": "synthetic",
+   "reliability": 0.95,
+   "tier": "A"
+  }
+ ],
+ "transfers": [
+  {
+   "chain": "solana",
+   "tx_hash": "syn-sol-1",
+   "block_time": 1700000000,
+   "from": "6YMEjhBqVTMaSRWcmVkLrnHZ22FWEDJEpTeonAg8GKSy",
+   "to": "6URwbPipuA4MJLG7LCRRZuWnms3JZ9cRG3z9indXWz8G",
+   "asset": "SOL",
+   "token_contract": null,
+   "amount": "50",
+   "usd": "5000.0",
+   "block_number": 250000000,
+   "in_scope": true
+  },
+  {
+   "chain": "solana",
+   "tx_hash": "syn-sol-2",
+   "block_time": 1700000900,
+   "from": "6URwbPipuA4MJLG7LCRRZuWnms3JZ9cRG3z9indXWz8G",
+   "to": "6cGXszer5keoaWm8Co5G9f4KGBThuGz4NsKTqYij1emg",
+   "asset": "SOL",
+   "token_contract": null,
+   "amount": "49",
+   "usd": "4900.0",
+   "block_number": 250001800,
+   "in_scope": true
+  }
+ ],
+ "_comment": "SYNTHETIC TEST DATA - fabricated addresses and transactions; see synthetic_make_engine_fixtures.py"
+}

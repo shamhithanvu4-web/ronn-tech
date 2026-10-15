@@ -1,0 +1,47 @@
+{
+ "chain": "ethereum",
+ "suspect": "0x6565656565656565656565656565656565656565",
+ "labels": [
+  {
+   "chain": "ethereum",
+   "address": "0x4242424242424242424242424242424242424242",
+   "entity_id": 7,
+   "entity_name": "Sanctioned (synthetic)",
+   "entity_type": "SANCTIONED",
+   "is_vasp": false,
+   "role": "UNKNOWN",
+   "source": "synthetic",
+   "reliability": 0.95,
+   "tier": "A"
+  }
+ ],
+ "transfers": [
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-s-0",
+   "block_time": 1700000000,
+   "from": "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+   "to": "0x6565656565656565656565656565656565656565",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "3000",
+   "usd": "3000",
+   "block_number": 18000000,
+   "in_scope": true
+  },
+  {
+   "chain": "ethereum",
+   "tx_hash": "syn-s-1",
+   "block_time": 1700004000,
+   "from": "0x6565656565656565656565656565656565656565",
+   "to": "0x4242424242424242424242424242424242424242",
+   "asset": "USDT",
+   "token_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+   "amount": "3000",
+   "usd": "3000",
+   "block_number": 18000333,
+   "in_scope": true
+  }
+ ],
+ "_comment": "SYNTHETIC TEST DATA - fabricated addresses and transactions; see synthetic_make_engine_fixtures.py"
+}
