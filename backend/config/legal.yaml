@@ -1,0 +1,41 @@
+# Legal bases offered to the investigating officer when drafting a lawful request.
+#
+# IMPORTANT: Legal provisions to be confirmed by the investigating officer.
+# Entries are not legal advice. Only the disclosure default below was given in the
+# project specification; the other entries were located through public secondary
+# sources (source_url) and are marked unverified until the agency's legal cell
+# confirms them against the official gazette text (https://www.indiacode.nic.in).
+
+disclaimer: Legal provisions to be confirmed by the investigating officer.
+
+INFORMATION_DISCLOSURE:
+  default: bnss_94
+  options:
+    - id: bnss_94
+      label: "Section 94, Bharatiya Nagarik Suraksha Sanhita, 2023"
+      summary: Summons to produce document or other thing.
+      source_url: https://vidhijudicial.com/section-94-of-the-bharatiya-nagarik-suraksha-sanhita,-2023.html
+      verification_status: unverified
+
+FREEZE_HOLD:
+  default: null   # no default: the officer must choose
+  options:
+    - id: bnss_106
+      label: "Section 106, Bharatiya Nagarik Suraksha Sanhita, 2023"
+      summary: Power of police officer to seize certain property.
+      source_url: https://www.vidhijudicial.com/section-106-of-the-bharatiya-nagarik-suraksha-sanhita,-2023.html
+      verification_status: unverified
+    - id: bnss_107
+      label: "Section 107, Bharatiya Nagarik Suraksha Sanhita, 2023"
+      summary: Attachment, forfeiture or restoration of property (on a Magistrate's order).
+      source_url: https://vidhijudicial.com/section-107-of-the-bharatiya-nagarik-suraksha-sanhita,-2023.html
+      verification_status: unverified
+    - id: other
+      label: "Other provision (officer to specify in the request notes)"
+      summary: Free-text legal basis entered by the officer.
+      source_url: null
+      verification_status: unverified
+
+electronic_record_certificate:
+  label: "Certificate modelled on Section 63, Bharatiya Sakshya Adhiniyam, 2023"
+  verification_status: unverified

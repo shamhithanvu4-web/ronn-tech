@@ -1,0 +1,8 @@
+.env
+data/*.db*
+evidence/*
+!evidence/.gitkeep
+eval/eval.db*
+__pycache__/
+.pytest_cache/
+.venv/

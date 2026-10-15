@@ -1,0 +1,84 @@
+# Attribution scoring and traversal parameters (SPEC §6).
+# Change weights only after an evaluation run (eval/run_eval.py) and record the
+# before/after metrics in docs/EVALUATION.md.
+
+reliability_tiers:
+  A: 0.95      # exchange self-published proof-of-reserve wallets; OFAC SDN (SANCTIONED only)
+  B: 0.80      # Etherscan-derived labels, Tronscan tags, Ransomwhere
+  C_min: 0.60  # runtime inference (deposit sweep, BTC common-input)
+  C_max: 0.85
+  D: 0.50      # WalletExplorer clusters, analyst-added labels until verified
+
+# Labels seen on one EVM chain applied to the same EOA on another EVM chain
+# (same key holder). Contract-role labels are never carried across chains.
+cross_evm_label_factor: 0.9
+
+hop_decay:     # H(hops)
+  0: 1.00
+  1: 1.00
+  2: 0.85
+  3: 0.70
+  4: 0.55
+  5: 0.40
+
+timing:        # T
+  fast_hours: 72
+  fast_factor: 1.0
+  medium_days: 30
+  medium_factor: 0.8
+  slow_factor: 0.6
+
+confidence_tiers:   # on the 0-100 scale
+  high: 75
+  medium: 50
+  low: 25
+routable_min_confidence: 50
+
+traversal:
+  default_max_hops: 3
+  max_hops_limit: 5
+  backward_hops: 2
+  window_days: 90
+  top_counterparties: 5
+  min_outflow_share: 0.10
+  dust_usd: 10
+  high_activity_tx_count: 5000
+  high_activity_counterparties: 200
+  node_budget: 150
+  api_call_budget: 600
+  transfers_page_limit: 1000
+  max_paths_per_target: 50
+  terminal_entity_types: [CEX, CUSTODIAL_WALLET, INSTANT_SWAP, OTC_P2P, PAYMENT_PROCESSOR, MIXER, BRIDGE, SANCTIONED, DEX]
+
+deposit_inference:          # Victor (2020), adapted: alpha is relative here
+  alpha: 0.01
+  tau_blocks_ethereum: 3200
+  tau_seconds_other: 39600
+  gas_topup_window_hours: 24
+  exclusivity_max_counterparties: 3
+  reliability_sweep_only: 0.70
+  reliability_one_corroboration: 0.80
+  reliability_all_three: 0.85
+
+btc_clustering:
+  common_input_reliability: 0.85
+  coinjoin_min_equal_outputs: 5
+
+typologies:
+  peel_chain_min_steps: 3
+  peel_small_output_share: 0.10
+  fan_threshold: 10
+  fan_window_hours: 24
+  rapid_pass_through_share: 0.90
+  rapid_pass_through_hours: 1
+  structuring_min_count: 5
+  structuring_window_hours: 24
+  structuring_round_unit: 100       # amounts that are multiples of this (USD or native units)
+  structuring_tolerance: 0.02       # "near-identical" = within 2 % of each other
+  poisoning_prefix: 4
+  poisoning_suffix: 4
+
+risk:
+  indirect_hops: 2
+  indirect_min_share: 0.10
+  typology_count_medium: 2

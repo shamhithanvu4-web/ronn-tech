@@ -1,0 +1,112 @@
+# In-scope tokens per chain, identified by CONTRACT ADDRESS (never by symbol:
+# fake "USDT" tokens are used in address-poisoning scams).
+#
+# verified: true  -> the contract was checked on the chain's official explorer or
+#                    the issuer's own contract list, at verified_url, on verified_at.
+# verified: false -> could not be checked from the build environment; the team
+#                    must open verify_url and confirm before relying on it.
+# contract: null  -> no issuer-listed contract was found; the token is not tracked.
+#
+# EVM contracts are stored lowercase (labels and transfers are lowercased too).
+
+ethereum:
+  - symbol: USDT
+    contract: "0xdac17f958d2ee523a2206206994597c13d831ec7"
+    decimals: 6
+    stablecoin: true
+    verified: true
+    verified_url: https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7
+    verified_at: "2026-10-15"
+    note: Etherscan token page shows Tether USD (USDT), 6 decimals; also listed on tether.to/en/supported-protocols.
+  - symbol: USDC
+    contract: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+    decimals: 6
+    stablecoin: true
+    verified: true
+    verified_url: https://etherscan.io/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+    verified_at: "2026-10-15"
+    note: Etherscan token page shows USDC, 6 decimals; also on developers.circle.com/stablecoins/usdc-contract-addresses.
+
+polygon:
+  - symbol: USDT
+    contract: "0xc2132d05d31c914a87c6611c10748aeb04b58e8f"
+    decimals: 6
+    stablecoin: true
+    verified: false
+    verify_url: https://polygonscan.com/token/0xc2132d05d31c914a87c6611c10748aeb04b58e8f
+    note: Polygonscan could not be fetched from the build environment. Confirm before use.
+  - symbol: USDC
+    contract: "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359"
+    decimals: 6
+    stablecoin: true
+    verified: true
+    verified_url: https://developers.circle.com/stablecoins/usdc-contract-addresses
+    verified_at: "2026-10-15"
+    note: Native USDC on Polygon PoS per Circle's contract list.
+
+arbitrum:
+  - symbol: USDT
+    contract: "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
+    decimals: 6
+    stablecoin: true
+    verified: true
+    verified_url: https://arbiscan.io/token/0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9
+    verified_at: "2026-10-15"
+    note: Arbiscan now names this contract USD₮0 (symbol USD₮0), 6 decimals.
+  - symbol: USDC
+    contract: "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    decimals: 6
+    stablecoin: true
+    verified: true
+    verified_url: https://arbiscan.io/token/0xaf88d065e77c8cc2239327c5edb3a432268e5831
+    verified_at: "2026-10-15"
+    note: Arbiscan shows USD Coin (USDC), 6 decimals; also on Circle's contract list.
+
+bsc:
+  - symbol: USDT
+    contract: "0x55d398326f99059ff775485246999027b3197955"
+    decimals: 18
+    stablecoin: true
+    verified: false
+    verify_url: https://bscscan.com/token/0x55d398326f99059ff775485246999027b3197955
+    note: BscScan could not be fetched from the build environment; tether.to does not list a BSC USDT contract. Confirm before use.
+  - symbol: USDC
+    contract: "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
+    decimals: 18
+    stablecoin: true
+    verified: false
+    verify_url: https://bscscan.com/token/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d
+    note: Bridged (Binance-Peg) USDC; Circle does not list a BSC contract. Confirm before use.
+
+tron:
+  - symbol: USDT
+    contract: "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t"
+    decimals: 6
+    stablecoin: true
+    verified: true
+    verified_url: https://tether.to/en/supported-protocols/
+    verified_at: "2026-10-15"
+    note: USDT-TRC20 contract as listed by Tether. Priority asset for Indian fraud cases.
+  - symbol: USDC
+    contract: null
+    decimals: 6
+    stablecoin: true
+    verified: false
+    verify_url: https://developers.circle.com/stablecoins/usdc-contract-addresses
+    note: Circle's current contract list has no TRON entry, so TRON USDC is not tracked.
+
+solana:
+  - symbol: USDT
+    contract: "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"
+    decimals: 6
+    stablecoin: true
+    verified: true
+    verified_url: https://tether.to/en/supported-protocols/
+    verified_at: "2026-10-15"
+  - symbol: USDC
+    contract: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    decimals: 6
+    stablecoin: true
+    verified: true
+    verified_url: https://developers.circle.com/stablecoins/usdc-contract-addresses
+    verified_at: "2026-10-15"

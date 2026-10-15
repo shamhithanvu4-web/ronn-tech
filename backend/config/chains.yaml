@@ -1,0 +1,112 @@
+# Chain registry. Explorer URL patterns use {tx} and {address} placeholders.
+# dust_native is the fallback dust threshold (in native units) used when no USD
+# price is available; the primary threshold is scoring.yaml -> traversal.dust_usd.
+chains:
+  bitcoin:
+    family: utxo
+    provider: esplora
+    base_urls:
+      - https://blockstream.info/api
+      - https://mempool.space/api
+    rate_per_sec: 2
+    native: BTC
+    decimals: 8
+    coingecko_id: bitcoin
+    explorer_tx: "https://blockstream.info/tx/{tx}"
+    explorer_address: "https://blockstream.info/address/{address}"
+    tau_seconds: 39600          # 11 h wall-clock for non-Ethereum chains
+    dust_native: "0.0001"
+
+  ethereum:
+    family: evm
+    provider: etherscan
+    chainid: 1
+    base_url: https://api.etherscan.io/v2/api
+    rate_per_sec: 3
+    native: ETH
+    decimals: 18
+    coingecko_id: ethereum
+    explorer_tx: "https://etherscan.io/tx/{tx}"
+    explorer_address: "https://etherscan.io/address/{address}"
+    tau_blocks: 3200            # Victor (2020) deposit-address-reuse window
+    tau_seconds: 38400          # 3,200 blocks x 12 s (used when block numbers are absent)
+    dust_native: "0.003"
+
+  polygon:
+    family: evm
+    provider: etherscan
+    chainid: 137
+    base_url: https://api.etherscan.io/v2/api
+    rate_per_sec: 3
+    native: POL
+    decimals: 18
+    coingecko_id: polygon-ecosystem-token
+    explorer_tx: "https://polygonscan.com/tx/{tx}"
+    explorer_address: "https://polygonscan.com/address/{address}"
+    tau_seconds: 39600
+    dust_native: "20"
+
+  arbitrum:
+    family: evm
+    provider: etherscan
+    chainid: 42161
+    base_url: https://api.etherscan.io/v2/api
+    rate_per_sec: 3
+    native: ETH
+    decimals: 18
+    coingecko_id: ethereum
+    explorer_tx: "https://arbiscan.io/tx/{tx}"
+    explorer_address: "https://arbiscan.io/address/{address}"
+    tau_seconds: 39600
+    dust_native: "0.003"
+
+  bsc:
+    family: evm
+    provider: etherscan
+    chainid: 56
+    base_url: https://api.etherscan.io/v2/api
+    rate_per_sec: 3
+    native: BNB
+    decimals: 18
+    coingecko_id: binancecoin
+    explorer_tx: "https://bscscan.com/tx/{tx}"
+    explorer_address: "https://bscscan.com/address/{address}"
+    tau_seconds: 39600
+    dust_native: "0.015"
+    free_tier: false
+    # Etherscan's free tier does not cover BSC; the adapter detects the plan
+    # error at runtime and reports the chain as "requires paid plan".
+
+  tron:
+    family: tron
+    provider: trongrid
+    base_url: https://api.trongrid.io
+    rate_per_sec: 10
+    native: TRX
+    decimals: 6
+    coingecko_id: tron
+    explorer_tx: "https://tronscan.org/#/transaction/{tx}"
+    explorer_address: "https://tronscan.org/#/address/{address}"
+    tau_seconds: 39600
+    dust_native: "35"
+
+  solana:
+    family: solana
+    provider: helius
+    # Helius documentation shows both api-mainnet.helius-rpc.com and
+    # mainnet.helius-rpc.com for the /v0 enhanced APIs; change here if needed.
+    base_url: https://api-mainnet.helius-rpc.com
+    rate_per_sec: 5
+    native: SOL
+    decimals: 9
+    coingecko_id: solana
+    explorer_tx: "https://solscan.io/tx/{tx}"
+    explorer_address: "https://solscan.io/account/{address}"
+    tau_seconds: 39600
+    dust_native: "0.05"
+    requires_key: HELIUS_API_KEY
+
+prices:
+  provider: coingecko
+  base_url: https://api.coingecko.com/api/v3
+  rate_per_sec: 0.5

@@ -1,0 +1,13 @@
+.env
+data/*.db
+data/*.db-wal
+data/*.db-shm
+evidence/
+!evidence/.gitkeep
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+eval/eval.db
+eval/eval.db-*
